@@ -1,0 +1,138 @@
+/*
+ * Menyu ma’lumotlari. Yangi taom qo‘shish uchun massivga yangi obyekt yozing,
+ * rasmni assets/img/menu/ papkasiga joylang.
+ *
+ * cat: breakfast | salads | soups | pasta | burgers | mains | national | desserts | sides | hot | cold
+ * chef: true — "Oshpaz tavsiyasi" belgisi
+ * macros: [kkal, oqsil, yog‘, uglevod] (gramm)
+ */
+window.UNION_CATEGORIES = ['breakfast', 'salads', 'soups', 'pasta', 'burgers', 'mains', 'national', 'sides', 'desserts', 'hot', 'cold'];
+
+window.UNION_DISHES = [
+  // ——— Nonushta ———
+  { id: 'english-breakfast', cat: 'breakfast', price: 55000, chef: true, macros: [808, 34, 64, 22],
+    name: { uz: 'Ingliz nonushtasi', ru: 'Английский завтрак', en: 'English Breakfast' },
+    desc: { uz: 'tuxum, sosiska, qo‘ziqorin, loviya, tost', ru: 'яйца, сосиски, грибы, фасоль, тосты', en: 'eggs, sausages, mushrooms, beans, toast' } },
+  { id: 'scrambled-eggs', cat: 'breakfast', price: 40000, macros: [415, 19, 29, 19],
+    name: { uz: 'Skrembl', ru: 'Скрэмбл', en: 'Scrambled Eggs' },
+    desc: { uz: 'skrembl, poshot tuxum, tost, cherri pomidor, rukkola, parmezan', ru: 'скрэмбл, яйцо пашот, тосты, томаты черри, руккола, пармезан', en: 'scrambled eggs, poached egg, toast, cherry tomatoes, arugula, parmesan' } },
+  { id: 'avocado-toast', cat: 'breakfast', price: 47000, macros: [431, 17, 24, 40],
+    name: { uz: 'Avokadoli tost', ru: 'Авокадо на тосте', en: 'Avocado Toast' },
+    desc: { uz: 'tost, avokado, tuxum, feta, kinza, qalampir', ru: 'тост, авокадо, яйца, фета, кинза, перчики', en: 'toast, avocado, eggs, feta, cilantro, peppers' } },
+  { id: 'oatmeal', cat: 'breakfast', price: 35000, macros: [564, 16, 16, 85],
+    name: { uz: 'Suli bo‘tqasi', ru: 'Овсяная каша', en: 'Oatmeal' },
+    desc: { uz: 'suli, sut, banan, chernika, pista', ru: 'овсянка, молоко, банан, черника, фисташка', en: 'oats, milk, banana, blueberries, pistachio' } },
+  { id: 'syrniki', cat: 'breakfast', price: 40000, macros: [652, 29, 28, 69],
+    name: { uz: 'Sirniki', ru: 'Сырники', en: 'Syrniki' },
+    desc: { uz: 'tvorog, rezavor sousi, smetana, chernika', ru: 'творог, ягодный соус, сметана, черника', en: 'cottage cheese, berry sauce, sour cream, blueberries' } },
+  { id: 'meat-crepes', cat: 'breakfast', price: 45000, macros: [780, 29, 46, 60],
+    name: { uz: 'Go‘shtli bliniklar', ru: 'Блинчики с мясом', en: 'Crêpes with Meat' },
+    desc: { uz: 'bliniklar, qiyma go‘sht, ko‘k piyoz, smetana', ru: 'блинчики, мясной фарш, зелёный лук, сметана', en: 'crêpes, minced meat, green onion, sour cream' } },
+
+  // ——— Salatlar ———
+  { id: 'olivier', cat: 'salads', price: 43000, macros: [639, 21, 53, 17],
+    name: { uz: 'Olivye', ru: 'Оливье', en: 'Olivier Salad' },
+    desc: { uz: 'kartoshka, sabzi, no‘xat, bodring, mayonez', ru: 'картофель, морковь, горошек, огурцы, майонез', en: 'potatoes, carrots, peas, pickles, mayonnaise' } },
+  { id: 'caesar', cat: 'salads', price: 45000, macros: [362, 34, 17, 18],
+    name: { uz: 'Sezar', ru: 'Цезарь', en: 'Caesar Salad' },
+    desc: { uz: 'tovuq, romano salati, suxarik, parmezan, bedana tuxumi, cherri', ru: 'курица, салат романо, гренки, пармезан, перепелиные яйца, черри', en: 'chicken, romaine, croutons, parmesan, quail eggs, cherry tomatoes' } },
+  { id: 'eggplant-salad', cat: 'salads', price: 49000, macros: [329, 5, 3, 71],
+    name: { uz: 'Baqlajonli salat', ru: 'Салат с баклажанами', en: 'Eggplant Salad' },
+    desc: { uz: 'baqlajon, pomidor, rukkola, sous', ru: 'баклажаны, томаты, руккола, соус', en: 'eggplant, tomatoes, arugula, dressing' } },
+  { id: 'greek-salad', cat: 'salads', price: 38000, macros: [269, 7, 20, 17],
+    name: { uz: 'Yunon salati', ru: 'Греческий салат', en: 'Greek Salad' },
+    desc: { uz: 'pomidor, bodring, qalampir, feta, zaytun', ru: 'томаты, огурцы, перец, фета, маслины', en: 'tomatoes, cucumbers, peppers, feta, olives' } },
+
+  // ——— Sho‘rvalar ———
+  { id: 'chicken-soup', cat: 'soups', price: 35000, macros: [400, 30, 5, 35],
+    name: { uz: 'Tovuqli sho‘rva', ru: 'Куриный суп', en: 'Chicken Soup' },
+    desc: { uz: 'tovuq, lapsha, sabzi, ko‘katlar, suxarik', ru: 'курица, лапша, морковь, зелень, гренки', en: 'chicken, noodles, carrots, herbs, croutons' } },
+  { id: 'lentil-soup', cat: 'soups', price: 35000, macros: [368, 22, 3, 68],
+    name: { uz: 'Yasmiqli sho‘rva', ru: 'Чечевичный суп', en: 'Lentil Soup' },
+    desc: { uz: 'yasmiq, qaymoq, qovoq urug‘i, suxarik', ru: 'чечевица, сливки, тыквенные семечки, гренки', en: 'lentils, cream, pumpkin seeds, croutons' } },
+  { id: 'pumpkin-soup', cat: 'soups', price: 35000, macros: [379, 5, 28, 30],
+    name: { uz: 'Qovoqli sho‘rva', ru: 'Тыквенный суп', en: 'Pumpkin Soup' },
+    desc: { uz: 'qovoq, qaymoq, limon, suxarik', ru: 'тыква, сливки, лимон, гренки', en: 'pumpkin, cream, lemon, croutons' } },
+  { id: 'khan-borscht', cat: 'soups', price: 55000, macros: [311, 14, 19, 22],
+    name: { uz: 'Xon borshi', ru: 'Борщ ханский', en: 'Khan Borscht' },
+    desc: { uz: 'lavlagi, mol go‘shti, smetana, borodino noni', ru: 'свёкла, говядина, сметана, бородинский хлеб', en: 'beetroot, beef, sour cream, rye bread' } },
+
+  // ——— Pasta ———
+  { id: 'pasta-bolognese', cat: 'pasta', price: 50000, macros: [544, 25, 18, 72],
+    name: { uz: 'Pasta Bolonyeze', ru: 'Паста болоньезе', en: 'Pasta Bolognese' },
+    desc: { uz: 'spagetti, go‘shtli sous, parmezan', ru: 'спагетти, мясной соус, пармезан', en: 'spaghetti, meat sauce, parmesan' } },
+  { id: 'pasta-alfredo', cat: 'pasta', price: 53000, macros: [713, 32, 90, 57],
+    name: { uz: 'Pasta Alfredo', ru: 'Паста альфредо', en: 'Pasta Alfredo' },
+    desc: { uz: 'fettuchini, tovuq, qaymoqli sous, parmezan', ru: 'феттучини, курица, сливочный соус, пармезан', en: 'fettuccine, chicken, cream sauce, parmesan' } },
+  { id: 'pasta-milanese', cat: 'pasta', price: 58000, macros: [604, 47, 8, 85],
+    name: { uz: 'Pasta Milan uslubida', ru: 'Паста миланская', en: 'Pasta Milanese' },
+    desc: { uz: 'spagetti, tomat sousi, panirovkali tovuq, parmezan', ru: 'спагетти, томатный соус, куриная отбивная, пармезан', en: 'spaghetti, tomato sauce, breaded chicken, parmesan' } },
+  { id: 'pasta-salmon', cat: 'pasta', price: 67000, chef: true, macros: [982, 29, 68, 62],
+    name: { uz: 'Losos bilan pasta', ru: 'Паста с лососем', en: 'Salmon Pasta' },
+    desc: { uz: 'fettuchini, losos, qaymoqli sous, ko‘katlar', ru: 'феттучини, лосось, сливочный соус, зелень', en: 'fettuccine, salmon, cream sauce, herbs' } },
+
+  // ——— Burger va sendvichlar ———
+  { id: 'beef-burger', cat: 'burgers', price: 55000, macros: [1131, 37, 71, 86],
+    name: { uz: 'Mol go‘shtli burger', ru: 'Бургер говядина', en: 'Beef Burger' },
+    desc: { uz: 'mol go‘shti kotleti, cheddar pishlog‘i, sabzavotlar, fri kartoshka', ru: 'говяжья котлета, сыр чеддер, овощи, картофель фри', en: 'beef patty, cheddar, vegetables, fries' } },
+  { id: 'steak-burger', cat: 'burgers', price: 72000, chef: true, macros: [1126, 39, 70, 83],
+    name: { uz: 'Stek burger', ru: 'Стейк бургер', en: 'Steak Burger' },
+    desc: { uz: 'mol go‘shti steyki, pishloq, sabzavotlar, sous, fri kartoshka', ru: 'говяжий стейк, сыр, овощи, соус, картофель фри', en: 'beef steak, cheese, vegetables, sauce, fries' } },
+  { id: 'chicken-burger', cat: 'burgers', price: 59000, macros: [764, 42, 23, 96],
+    name: { uz: 'Tovuqli burger', ru: 'Бургер куриный', en: 'Chicken Burger' },
+    desc: { uz: 'tovuq kotleti, salat, pomidor, sous, fri kartoshka', ru: 'куриная котлета, салат, томаты, соус, картофель фри', en: 'chicken patty, lettuce, tomato, sauce, fries' } },
+  { id: 'cheeseburger-sandwich', cat: 'burgers', price: 55000, macros: [1150, 37, 71, 91],
+    name: { uz: 'Chizburger sendvich', ru: 'Чизбургер сэндвич', en: 'Cheeseburger Sandwich' },
+    desc: { uz: 'mol go‘shti kotleti, pishloq, piyoz, sous, fri kartoshka', ru: 'говяжья котлета, сыр, лук, соус, картофель фри', en: 'beef patty, cheese, onion, sauce, fries' } },
+  { id: 'chorizo-sandwich', cat: 'burgers', price: 49000, macros: [1141, 29, 73, 93],
+    name: { uz: 'Chorizo sendvich', ru: 'Чоризо сэндвич', en: 'Chorizo Sandwich' },
+    desc: { uz: 'chorizo kolbasasi, sabzavotlar, sous, fri kartoshka', ru: 'колбаски чоризо, овощи, соус, картофель фри', en: 'chorizo, vegetables, sauce, fries' } },
+
+  // ——— Issiq taomlar ———
+  { id: 'chicken-strips', cat: 'mains', price: 42000, macros: [767, 42, 22, 99],
+    name: { uz: 'Tovuq tayoqchalari', ru: 'Куриные палочки', en: 'Chicken Strips' },
+    desc: { uz: 'panirovkali tovuq filesi, fri kartoshka, sous, tuzlangan bodring', ru: 'куриное филе в панировке, картофель фри, соус, огурцы', en: 'breaded chicken, fries, sauce, pickles' } },
+  { id: 'homestyle-potatoes', cat: 'mains', price: 74000, macros: [818, 32, 62, 33],
+    name: { uz: 'Uy uslubidagi kartoshka', ru: 'Картошка по-домашнему', en: 'Homestyle Potatoes' },
+    desc: { uz: 'kartoshka, mol go‘shti, qo‘ziqorin, piyoz, ko‘katlar', ru: 'картофель, говядина, грибы, лук, зелень', en: 'potatoes, beef, mushrooms, onion, herbs' } },
+  { id: 'beef-medallions', cat: 'mains', price: 120000, chef: true, macros: [833, 41, 61, 28],
+    name: { uz: 'Medalonlar va pyure', ru: 'Медальоны с пюре', en: 'Beef Medallions' },
+    desc: { uz: 'mol go‘shti medalonlari, kartoshka pyuresi, qaymoqli sous', ru: 'говяжьи медальоны, картофельное пюре, сливочный соус', en: 'beef medallions, mashed potatoes, cream sauce' } },
+  { id: 'trout', cat: 'mains', price: 120000, chef: true, macros: [1324, 34, 117, 34],
+    name: { uz: 'Forel', ru: 'Форель', en: 'Trout' },
+    desc: { uz: 'forel filesi, kartoshka pyuresi, qaymoqli sous, kapers', ru: 'филе форели, картофельное пюре, сливочный соус, каперсы', en: 'trout fillet, mashed potatoes, cream sauce, capers' } },
+  { id: 'schnitzel', cat: 'mains', price: 60000, macros: [791, 38, 41, 67],
+    name: { uz: 'Shnitsel', ru: 'Шницель', en: 'Schnitzel' },
+    desc: { uz: 'panirovkali kotlet, limon, souslar', ru: 'отбивная в панировке, лимон, соусы', en: 'breaded cutlet, lemon, sauces' } },
+
+  // ——— Milliy taomlar ———
+  { id: 'chicken-sachtava', cat: 'national', price: 58000, chef: true, macros: [709, 32, 20, 110],
+    name: { uz: 'Tovuqli sachtava', ru: 'Сачтава куриная', en: 'Chicken Sachtava' },
+    desc: { uz: 'tovuq, sabzavotlar, tomat sousi, guruch', ru: 'курица, овощи, томатный соус, рис', en: 'chicken, vegetables, tomato sauce, rice' } },
+  { id: 'beef-sachtava', cat: 'national', price: 69000, macros: [761, 32, 27, 110],
+    name: { uz: 'Mol go‘shtli sachtava', ru: 'Сачтава говяжья', en: 'Beef Sachtava' },
+    desc: { uz: 'mol go‘shti, sabzavotlar, tomat sousi, guruch', ru: 'говядина, овощи, томатный соус, рис', en: 'beef, vegetables, tomato sauce, rice' } },
+
+  // ——— Garnir va souslar ———
+  { id: 'french-fries', cat: 'sides', price: 23000, macros: [320, 5, 20, 56],
+    name: { uz: 'Fri kartoshka', ru: 'Картошка фри', en: 'French Fries' },
+    desc: { uz: 'kartoshka, tuz, ketchup', ru: 'картофель, соль, кетчуп', en: 'potatoes, salt, ketchup' } },
+  { id: 'potato-wedges', cat: 'sides', price: 23000, macros: [210, 4, 8, 30],
+    name: { uz: 'Qishloqcha kartoshka', ru: 'Картошка по-деревенски', en: 'Potato Wedges' },
+    desc: { uz: 'kartoshka, ziravorlar, ko‘katlar', ru: 'картофель, специи, зелень', en: 'potatoes, spices, herbs' } },
+  { id: 'steamed-rice', cat: 'sides', price: 23000, macros: [283, 4, 9, 47],
+    name: { uz: 'Guruch', ru: 'Рис', en: 'Steamed Rice' },
+    desc: { uz: 'guruch, shivit', ru: 'рис, укроп', en: 'rice, dill' } },
+  { id: 'mashed-potatoes', cat: 'sides', price: 23000, macros: [209, 3, 12, 22],
+    name: { uz: 'Kartoshka pyuresi', ru: 'Пюре', en: 'Mashed Potatoes' },
+    desc: { uz: 'kartoshka, sariyog‘, shivit', ru: 'картофель, сливочное масло, укроп', en: 'potatoes, butter, dill' } },
+  { id: 'grilled-vegetables', cat: 'sides', price: 23000, macros: [268, 6, 21, 15],
+    name: { uz: 'Grilda sabzavotlar', ru: 'Овощи на гриле', en: 'Grilled Vegetables' },
+    desc: { uz: 'baqlajon, qalampir, pomidor, shampinyon, piyoz', ru: 'баклажаны, перец, томаты, шампиньоны, лук', en: 'eggplant, peppers, tomatoes, mushrooms, onion' } },
+  { id: 'bread-assortment', cat: 'sides', price: 27000,
+    name: { uz: 'Non assorti', ru: 'Хлеб ассорти', en: 'Bread Assortment' },
+    desc: { uz: 'yangi nonlar assortisi', ru: 'ассорти свежего хлеба', en: 'assorted fresh bread' } },
+  { id: 'sauces', cat: 'sides', price: 10000, img: null,
+    name: { uz: 'Souslar', ru: 'Соусы', en: 'Sauces' },
+    desc: { uz: 'mayonez, ketchup, BBQ, sarimsoqli, pishloqli, chili — narxi 1 dona uchun', ru: 'майонез, кетчуп, барбекю, чесночный, сырный, чили — цена за 1 шт.', en: 'mayonnaise, ketchup, BBQ, garlic, cheese, chili — price per portion' } },
+];
